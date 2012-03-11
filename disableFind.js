@@ -43,20 +43,20 @@ function random_character() {
 // disableFind() takes an element and injects a random character after each letter
 jQuery.fn.disableFind = function(){
     return this.each(function (){
-		newHTML = "";								// create a new blank string
-		stop = false;								// boolean to toggle whether we're in a < > or not
-		currentElement = $(this);					// variable to hold the current element
-		html = currentElement.html();				// get html from current element
-		for (var i = 0; i < html.length; i++)		// iterate through each character of the html
+		newHTML = "";                                 // create a new blank string
+		stop = false;                                 // boolean to toggle whether we're in a < > or not
+		currentElement = $(this);                     // variable to hold the current element
+		html = currentElement.html();                 // get html from current element
+		for (var i = 0; i < html.length; i++)         // iterate through each character of the html
 		{
-			newHTML += html[i];						// insert current character into newHTML
-			if (html[i] == '<') { stop = true };	// stop when entering a tag
-			if (html[i] == '>') { stop = false };	// continue when exiting a tag
-			if (stop == false) {					// inject random hidden character into newHTML
+			newHTML += html[i];                       // insert current character into newHTML
+			if (html[i] == '<') { stop = true };      // stop when entering a tag
+			if (html[i] == '>') { stop = false };     // continue when exiting a tag
+			if (stop == false) {                      // inject random hidden character into newHTML
 				newHTML += '<span style="position:absolute; left:-9999px;">'+ random_character() +'</span>';
 			}
-			if (html[i] == ' ') { newHTML += ' '; }	// insert a space if the current character is a space
+			if (html[i] == ' ') { newHTML += ' '; }   // insert a space if the current character is a space
 		}
-		currentElement.html(newHTML);				// replace current element with newHTML
+		currentElement.html(newHTML);                 // replace current element with newHTML
 	});
 };
