@@ -1,4 +1,4 @@
-A jQuery plugin to disable certain elements on a page from being searched. Check out the demo to see it in action.
+A jQuery plugin to disable certain elements on a page from being searched. Check out the [demo](http://blog.seangransee.com/demos/disableFind/demo.html) to see it in action.
 
 ### How to use:
 Include jQuery and disableFind.js.
