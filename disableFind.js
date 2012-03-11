@@ -29,7 +29,7 @@
  * Example usage:
  * 
  * $('p').disableFind();               // make all paragraphs unsearchable
- * $('.unsearchable').disableFind();   // make all elements with class "unsearchable" unsearchable
+ * $('.unsearchable').disableFind();   // make all elements with "unsearchable" class unsearchable
  * $(body).disableFind();			   // make all text on page unsearchable
  * 
  */

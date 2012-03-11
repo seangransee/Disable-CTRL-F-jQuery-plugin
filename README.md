@@ -11,7 +11,7 @@ Call the disableFind() function on the element(s) you want to make unsearchable.
 <pre>
 $('p').disableFind();               // make all paragraphs unsearchable
 
-$('.unsearchable').disableFind();   // make all elements with class "unsearchable" unsearchable
+$('.unsearchable').disableFind();   // make all elements with "unsearchable" class unsearchable
 
 $(body).disableFind();			    // make all text on page unsearchable
 </pre>
