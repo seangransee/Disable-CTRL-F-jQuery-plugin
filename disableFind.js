@@ -44,7 +44,7 @@ function random_character() {
 jQuery.fn.disableFind = function(){
     return this.each(function (){
 		newHTML = "";                                 // create a new blank string
-		stop = false;                                 // boolean to toggle whether we're in a < > or not
+		stop = false;                                 // boolean to toggle whether we're in a tag or not
 		currentElement = $(this);                     // variable to hold the current element
 		html = currentElement.html();                 // get html from current element
 		for (var i = 0; i < html.length; i++)         // iterate through each character of the html
