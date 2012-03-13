@@ -34,11 +34,6 @@
  * 
  */
 
-// generate a random character
-function random_character() {
-    var chars = "0123456789abcdefghijklmnopqurstuvwxyzABCDEFGHIJKLMNOPQURSTUVWXYZ";
-    return chars.substr( Math.floor(Math.random() * 62), 1);
-}
 
 // disableFind() takes an element and injects a random character after each letter
 jQuery.fn.disableFind = function(){
@@ -52,8 +47,8 @@ jQuery.fn.disableFind = function(){
 			newHTML += html[i];                       // insert current character into newHTML
 			if (html[i] == '<') { stop = true };      // stop when entering a tag
 			if (html[i] == '>') { stop = false };     // continue when exiting a tag
-			if (stop == false) {                      // inject random hidden character into newHTML
-				newHTML += '<span style="position:absolute; left:-9999px;">'+ random_character() +'</span>';
+			if (stop == false) {                      // inject dot into newHTML
+				newHTML += '<span style="position:absolute; left:-9999px;">'+ '.' +'</span>';
 			}
 			if (html[i] == ' ') { newHTML += ' '; }   // insert a space if the current character is a space
 		}
