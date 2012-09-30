@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="author" content="Sean Gransee"> 
+		<title>Disable CTRL+F jQuery plugin</title>
+		<style type="text/css">
+			p {
+				width: 500px;
+				margin: 0 auto;
+				padding: 20px 0;
+			}
+		</style>
+	</head>
+	<body>
+	
+		<p class="unsearchable">This is a demo of the <em><a href="https://github.com/seangransee/Disable-CTRL-F-jQuery-plugin" target="_blank">Disable CTRL+F jQuery plugin</a></em>. Try pressing CTRL+F to search through this paragraph, and notice how it doesn't work. When you copy and paste this text, the pasted text is also not searchable. You can enable this plugin for any element(s) in your HTML page.</p>
+		<p>This paragraph is not touched by the plugin, so it can be searched.</p>
+		
+		<!-- include jQuery and disableFind.js -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script src="disableFind.js"></script>
+		
+		<!-- call the plugin for any elements you want to be unsearchable -->
+		<script>
+			$('.unsearchable').disableFind();
+		</script>	
+	</body>
+</html>
